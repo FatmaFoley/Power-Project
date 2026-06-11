@@ -35,7 +35,7 @@ int main(void) {
 	/* Variable declarations and initialization */
 	uint8 key = 0, temp_prev = 0, temp = 0;
 	uint8 P001_Dist_error_counter = 0, P002_Temp_error_counter = 0, repeat = 1;
-	uint8 eeprom_data = 0, check = 0, faults_buffer[2] = { 0, 0 };
+	uint8 eeprom_data = 0, faults_buffer[2] = { 0, 0 };
 	uint16 distance_prev = 0, distance = 50;
 	DcMotor_State fan_state = CLOSE_FAN;
 
