@@ -9,7 +9,6 @@
  ******************************************************************************/
 
 #include "motor.h"
-#include "pwm.h"
 #include "common_macros.h"
 #include <avr/delay.h>
 #include "gpio.h"
@@ -29,10 +28,6 @@ void DcMotor_Init(void)
 
 void DcMotor_Rotate(DcMotor_State fan_state)
 {
-    /* Start PWM with 100% duty cycle (speed) for motor enable pin */
-    PWM_Timer0_Start(100);
-
-
     /* Set motor control pins to rotate motor or stop based on the state */
     switch(fan_state)
     {
